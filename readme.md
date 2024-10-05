@@ -67,7 +67,7 @@ pip3 install -r requirements.txt
 
 ## Lisensi
 
-[MIT License](LICENSE)
+Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detailnya.
 
 ## Kontribusi
 
