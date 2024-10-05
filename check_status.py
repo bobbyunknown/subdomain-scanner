@@ -1,5 +1,16 @@
 #!/usr/bin/env python3
 
+# Script dari BobbyUnknown
+# Gunakan dengan bijak dan bertanggung jawab
+#
+# Script ini digunakan untuk memeriksa status HTTP dari subdomain yang ditemukan
+# Pastikan Anda memiliki izin untuk memindai domain target
+# Penggunaan skrip ini mungkin dibatasi oleh kebijakan penggunaan yang adil dari layanan yang digunakan
+# 
+# Harap diingat bahwa penggunaan alat pemindaian tanpa izin dapat melanggar hukum
+# Gunakan hanya untuk tujuan yang sah dan etis
+# Penulis tidak bertanggung jawab atas penyalahgunaan script ini
+
 import sys
 import yaml
 import requests
