@@ -1,5 +1,8 @@
 # Subdomain Scanner dan Cloudflare Detector
 
+![Downloads](https://img.shields.io/github/downloads/bobbyunknown/subdomain-scanner/total)
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=bobbyunknown.subdomain-scanner)
+
 Proyek ini terdiri dari skrip Python untuk memindai subdomain dari sebuah domain, mendeteksi penggunaan Cloudflare, dan memeriksa status subdomain.
 
 ## Fitur
