@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     tags:
-      - 'v1.0.1'
+      - 'v*'
   workflow_dispatch:
 
 jobs:
@@ -12,8 +12,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Create tar.gz archive
-      run: tar -czvf subdomain-scanner.tar.gz scan_sub.py check_status.py
+    - name: Create package
+      run: make package
     
     - name: Create Release
       id: create_release
