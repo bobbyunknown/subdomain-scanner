@@ -69,11 +69,13 @@ def main():
         f.write(f"Persentase: {(ok_count/total_count)*100:.2f}%\n\n")
         f.write("Daftar domain dengan status 200 OK:\n")
         for domain in ok_domains:
-            f.write(f"{domain}\n")
+            clean_domain = domain.replace("https://", "")
+            f.write(f"{clean_domain}\n")
 
     print(colored(f"\nDomain dengan status 200 OK:", "cyan"))
     for domain in ok_domains:
-        print(colored(f"- {domain}", "cyan"))
+        clean_domain = domain.replace("https://", "")
+        print(colored(f"- {clean_domain}", "cyan"))
 
     print(colored(f"\nHasil telah disimpan ke {output_file}", "green"))
 
