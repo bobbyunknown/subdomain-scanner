@@ -21,6 +21,9 @@ jobs:
     - name: Run tests
       run: |
         python -m unittest discover tests
+    - name: Create tar.gz archive
+      run: |
+        tar -czvf subdomain-scanner.tar.gz scan_sub.py check_status.py
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -37,6 +40,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./scan_sub.py
-        asset_name: scan_sub.py
-        asset_content_type: text/x-python
+        asset_path: ./subdomain-scanner.tar.gz
+        asset_name: subdomain-scanner.tar.gz
+        asset_content_type: application/gzip
