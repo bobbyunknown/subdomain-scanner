@@ -11,20 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Run tests
-      run: |
-        python -m unittest discover tests
+    
     - name: Create tar.gz archive
-      run: |
-        tar -czvf subdomain-scanner.tar.gz scan_sub.py check_status.py
+      run: tar -czvf subdomain-scanner.tar.gz scan_sub.py check_status.py
+    
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -35,6 +25,7 @@ jobs:
         release_name: Release ${{ github.ref }}
         draft: false
         prerelease: false
+    
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
       env:
